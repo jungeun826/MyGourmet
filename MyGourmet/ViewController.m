@@ -105,6 +105,11 @@
         [self initTextField];
         [_resturantManager requestRestrant];
         [self.resturantTable reloadData];
+        if([self.detailTextView isFirstResponder])
+            [self.detailTextView resignFirstResponder];
+    }else if(buttonIndex == alertView.cancelButtonIndex){
+        if([self.detailTextView isFirstResponder])
+            [self.detailTextView resignFirstResponder];
     }
 }
 - (void)initTextField{
