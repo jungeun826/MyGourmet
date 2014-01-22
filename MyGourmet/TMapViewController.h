@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TMapView.h"
 
-@interface TMapViewController : UIViewController
+@interface TMapViewController : UIViewController <TMapViewDelegate>
 @property (nonatomic) float lon;
 @property (nonatomic) float lat;
 
