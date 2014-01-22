@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TMapViewController : UIViewController
+@interface TMapViewController : UIViewController{
+    float _lon;
+    float _lat;
+}
 
 @end

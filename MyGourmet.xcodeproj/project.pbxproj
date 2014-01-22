@@ -23,6 +23,10 @@
 		0066501F188F51CC00F97DE5 /* MyGourmetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0066501E188F51CC00F97DE5 /* MyGourmetTests.m */; };
 		0066502A188F538800F97DE5 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00665029188F538800F97DE5 /* DetailViewController.m */; };
 		0066502D188F539700F97DE5 /* TMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0066502C188F539700F97DE5 /* TMapViewController.m */; };
+		0066502F188F570F00F97DE5 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0066502E188F570F00F97DE5 /* libsqlite3.dylib */; };
+		00665032188F574900F97DE5 /* ResturantManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00665031188F574900F97DE5 /* ResturantManager.m */; };
+		00665035188F578F00F97DE5 /* Resturant.m in Sources */ = {isa = PBXBuildFile; fileRef = 00665034188F578F00F97DE5 /* Resturant.m */; };
+		0066503A188F6EFF00F97DE5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00665039188F6EFF00F97DE5 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,12 @@
 		00665029188F538800F97DE5 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		0066502B188F539700F97DE5 /* TMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMapViewController.h; sourceTree = "<group>"; };
 		0066502C188F539700F97DE5 /* TMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMapViewController.m; sourceTree = "<group>"; };
+		0066502E188F570F00F97DE5 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		00665030188F574900F97DE5 /* ResturantManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResturantManager.h; sourceTree = "<group>"; };
+		00665031188F574900F97DE5 /* ResturantManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResturantManager.m; sourceTree = "<group>"; };
+		00665033188F578F00F97DE5 /* Resturant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Resturant.h; sourceTree = "<group>"; };
+		00665034188F578F00F97DE5 /* Resturant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Resturant.m; sourceTree = "<group>"; };
+		00665039188F6EFF00F97DE5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0066503A188F6EFF00F97DE5 /* CoreLocation.framework in Frameworks */,
+				0066502F188F570F00F97DE5 /* libsqlite3.dylib in Frameworks */,
 				00664FF6188F51CC00F97DE5 /* CoreGraphics.framework in Frameworks */,
 				00664FF8188F51CC00F97DE5 /* UIKit.framework in Frameworks */,
 				00664FF4188F51CC00F97DE5 /* Foundation.framework in Frameworks */,
@@ -107,6 +119,8 @@
 		00664FF2188F51CC00F97DE5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				00665039188F6EFF00F97DE5 /* CoreLocation.framework */,
+				0066502E188F570F00F97DE5 /* libsqlite3.dylib */,
 				00664FF3188F51CC00F97DE5 /* Foundation.framework */,
 				00664FF5188F51CC00F97DE5 /* CoreGraphics.framework */,
 				00664FF7188F51CC00F97DE5 /* UIKit.framework */,
@@ -129,6 +143,10 @@
 				00665029188F538800F97DE5 /* DetailViewController.m */,
 				0066502B188F539700F97DE5 /* TMapViewController.h */,
 				0066502C188F539700F97DE5 /* TMapViewController.m */,
+				00665030188F574900F97DE5 /* ResturantManager.h */,
+				00665031188F574900F97DE5 /* ResturantManager.m */,
+				00665033188F578F00F97DE5 /* Resturant.h */,
+				00665034188F578F00F97DE5 /* Resturant.m */,
 			);
 			path = MyGourmet;
 			sourceTree = "<group>";
@@ -261,8 +279,10 @@
 			files = (
 				0066502D188F539700F97DE5 /* TMapViewController.m in Sources */,
 				0066500A188F51CC00F97DE5 /* ViewController.m in Sources */,
+				00665035188F578F00F97DE5 /* Resturant.m in Sources */,
 				00665004188F51CC00F97DE5 /* AppDelegate.m in Sources */,
 				00665000188F51CC00F97DE5 /* main.m in Sources */,
+				00665032188F574900F97DE5 /* ResturantManager.m in Sources */,
 				0066502A188F538800F97DE5 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface DetailViewController : UIViewController
+#import "Resturant.h"
+@interface DetailViewController : UIViewController{
+    Resturant *resturant;
+}
 
 @end
