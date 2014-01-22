@@ -45,7 +45,7 @@ static ResturantManager *_instance = nil;
     
     if (existFile == NO) {
         //CREATE  TABLE  IF NOT EXISTS "main"."RESTURANT" ("Name" VARCHAR, "Tag" VARCHAR, "Detail" VARCHAR, "LocationName" VARCHAR, "lon" FLOAT, "lat" FLOAT)
-        char *creatSQL = "CREATE  TABLE  IF NOT EXISTS RESTURANT (Name TEXT, Tag TEXT, Detail TEXT, LocationName TEXT, lon FLOAT, lat FLOAT)";
+        char *creatSQL = "CREATE  TABLE  IF NOT EXISTS RESTURANT (Name TEXT, Tag TEXT, Detail TEXT, LocationName TEXT, lon FLOAT, lat FLOAT, insetIndex INTEGER)";
         char *errorMsg;
         ret = sqlite3_exec(db, creatSQL, NULL, NULL, &errorMsg);
         if (SQLITE_OK != ret) {
@@ -58,7 +58,9 @@ static ResturantManager *_instance = nil;
 }
 //맛집을 디비에 추가
 - (void)addRestruantWithResturant:(Resturant *)resturant {
-    NSString *sql = [NSString stringWithFormat:@"INSERT INTO RESTURANT (Name, Tag , Detail , LocationName , lon , lat ) VALUES ( '%@','%@','%@','%@',%f,%f)", resturant.name, resturant.tag, resturant.detail, resturant.locationName, resturant.lon, resturant.lat];
+    NSInteger rowID = (NSInteger)sqlite3_last_insert_rowid(db);
+    resturant.rowID = rowID+1;
+    NSString *sql = [NSString stringWithFormat:@"INSERT INTO RESTURANT (Name, Tag , Detail , LocationName , lon , lat, insetIndex ) VALUES ( '%@','%@','%@','%@',%f,%f, %d)", resturant.name, resturant.tag, resturant.detail, resturant.locationName, resturant.lon, resturant.lat, resturant.rowID];
     NSLog(@"sql : %@", sql);
     
     char *errMsg;
@@ -67,8 +69,22 @@ static ResturantManager *_instance = nil;
     if (SQLITE_OK != ret) {
         NSLog(@"Error on Insert New data : %s", errMsg);
     }
-    NSInteger rowID = (NSInteger)sqlite3_last_insert_rowid(db);
-    resturant.rowID = rowID;
+
+    NSLog(@"rowID : %d", (int)sqlite3_last_insert_rowid(db));
+}
+
+//맛집을 디비에서 제거
+- (void)removeRestruantWithRowID:(NSInteger)rowID {
+    //DELETE FROM ARTICLES WHERE GUID ='http://www.google.com'
+    NSString *sql = [NSString stringWithFormat:@"DELETE FROM RESTURANT WHERE insetIndex=%d", rowID];
+    NSLog(@"sql : %@", sql);
+    
+    char *errMsg;
+    int ret = sqlite3_exec(db, [sql UTF8String], NULL, nil, &errMsg);
+    
+    if (SQLITE_OK != ret) {
+        NSLog(@"Error on Insert New data : %s", errMsg);
+    }
 }
 
 // 현재 DB에 있는 맛집 갯수
@@ -79,7 +95,7 @@ static ResturantManager *_instance = nil;
 //맛집 정보를 디비에서 가져와 리스트에 저장함
 - (void)requestRestrant {
     _ResturantList = [[NSMutableArray alloc] init];
-    NSString *queryStr = @"SELECT * FROM RESTURANT";
+    NSString *queryStr = @"SELECT * FROM RESTURANT ";
     sqlite3_stmt *stmt;
     int ret = sqlite3_prepare_v2(db, [queryStr UTF8String], -1, &stmt, NULL);
     
@@ -89,6 +105,7 @@ static ResturantManager *_instance = nil;
     NSString *detailString;
     NSString *locationNameString;
     
+
     while (SQLITE_ROW == sqlite3_step(stmt)) {
         char *name = (char *)sqlite3_column_text(stmt, 0);
         nameString = [NSString stringWithCString:name encoding:NSUTF8StringEncoding];
@@ -107,6 +124,8 @@ static ResturantManager *_instance = nil;
         float lat = (float)sqlite3_column_double(stmt, 5);
         NSLog(@"name:%@,tag:%@,detail:%@,locationName:%@,lon:%f,lat:%f",nameString,tagString,detailString,locationNameString,lon,lat);
         Resturant *resturant= [[Resturant alloc] initWithName:nameString locationName:locationNameString tag:tagString detail:detailString lon:lon lat:lat];
+        
+        resturant.rowID = sqlite3_column_int(stmt, 6);;
         
         [_ResturantList addObject:resturant];
     }

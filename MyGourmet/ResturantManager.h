@@ -15,6 +15,7 @@
 
 - (void)requestRestrant;
 - (void)addRestruantWithResturant:(Resturant *)resturant;
+- (void)removeRestruantWithRowID:(NSInteger)rowID;
 - (NSInteger)getNumberOfResturants;
 - (Resturant *)getResturantAtIndex:(NSInteger)index;
 

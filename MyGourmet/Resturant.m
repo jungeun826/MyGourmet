@@ -9,7 +9,7 @@
 #import "Resturant.h"
 
 @implementation Resturant
-- (id)initWithName:(NSString *)name locationName:(NSString *)locationName tag:(NSString *)tag detail:(NSString *)detail lon:(float)lon lat:(float)lat {
+- (id)initWithName:(NSString *)name locationName:(NSString *)locationName tag:(NSString *)tag detail:(NSString *)detail lon:(float)lon lat:(float)lat{
     self = [super init];
     if (self) {
         self.name = name;
