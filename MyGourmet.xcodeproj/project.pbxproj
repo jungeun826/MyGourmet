@@ -21,6 +21,8 @@
 		00665015188F51CC00F97DE5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00664FF7188F51CC00F97DE5 /* UIKit.framework */; };
 		0066501D188F51CC00F97DE5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0066501B188F51CC00F97DE5 /* InfoPlist.strings */; };
 		0066501F188F51CC00F97DE5 /* MyGourmetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0066501E188F51CC00F97DE5 /* MyGourmetTests.m */; };
+		0066502A188F538800F97DE5 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00665029188F538800F97DE5 /* DetailViewController.m */; };
+		0066502D188F539700F97DE5 /* TMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0066502C188F539700F97DE5 /* TMapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		0066501A188F51CC00F97DE5 /* MyGourmetTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyGourmetTests-Info.plist"; sourceTree = "<group>"; };
 		0066501C188F51CC00F97DE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0066501E188F51CC00F97DE5 /* MyGourmetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyGourmetTests.m; sourceTree = "<group>"; };
+		00665028188F538800F97DE5 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		00665029188F538800F97DE5 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		0066502B188F539700F97DE5 /* TMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMapViewController.h; sourceTree = "<group>"; };
+		0066502C188F539700F97DE5 /* TMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,10 @@
 				00665009188F51CC00F97DE5 /* ViewController.m */,
 				0066500B188F51CC00F97DE5 /* Images.xcassets */,
 				00664FFA188F51CC00F97DE5 /* Supporting Files */,
+				00665028188F538800F97DE5 /* DetailViewController.h */,
+				00665029188F538800F97DE5 /* DetailViewController.m */,
+				0066502B188F539700F97DE5 /* TMapViewController.h */,
+				0066502C188F539700F97DE5 /* TMapViewController.m */,
 			);
 			path = MyGourmet;
 			sourceTree = "<group>";
@@ -249,9 +259,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0066502D188F539700F97DE5 /* TMapViewController.m in Sources */,
 				0066500A188F51CC00F97DE5 /* ViewController.m in Sources */,
 				00665004188F51CC00F97DE5 /* AppDelegate.m in Sources */,
 				00665000188F51CC00F97DE5 /* main.m in Sources */,
+				0066502A188F538800F97DE5 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
