@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Resturant.h"
-@interface DetailViewController : UIViewController{
-    Resturant *resturant;
-}
+
+@interface DetailViewController : UIViewController
+@property (strong, nonatomic) Resturant *resturant;
 
 @end

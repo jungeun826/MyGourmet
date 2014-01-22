@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TMapViewController : UIViewController{
-    float _lon;
-    float _lat;
-}
+@interface TMapViewController : UIViewController
+@property (nonatomic) float lon;
+@property (nonatomic) float lat;
 
 @end

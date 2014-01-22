@@ -10,6 +10,8 @@
 #import "ResturantManager.h"
 #import <CoreLocation/CoreLocation.h>
 #import "ResturantCell.h"
+#import "DetailViewController.h"
+
 #define MARGIN_Y 30
 #define HIDDEN_Y 600
 @interface ViewController () <CLLocationManagerDelegate, UIAlertViewDelegate, UITextFieldDelegate>
@@ -28,13 +30,12 @@
     float _lon;
     float _lat;
 }
-- (void)viewWillAppear:(BOOL)animated {
-    [self.navigationController setNavigationBarHidden:YES];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [self.navigationController setNavigationBarHidden:NO];
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    DetailViewController *DetailVC = segue.destinationViewController;
     
+    NSIndexPath *selectedIndex = [self.resturantTable indexPathForSelectedRow];
+    Resturant *resturant = [_resturantManager getResturantAtIndex:selectedIndex.row];
+    DetailVC.resturant = resturant;
 }
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];
@@ -67,24 +68,6 @@
 }
 - (void)changeRecordViewLocationWithY:(NSInteger)Y{
     self.recordView.frame = CGRectMake(self.recordView.frame.origin.x, Y, self.recordView.frame.size.width, self.recordView.frame.size.height);
-}
-- (void)viewDidLoad{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    _resturantManager = [ResturantManager sharedResturantManager];
-    [_resturantManager requestRestrant];
-    
-    [self changeRecordViewLocationWithY:HIDDEN_Y];
-    
-    
-    _coreLocationManager = [[CLLocationManager alloc] init];
-    if([CLLocationManager locationServicesEnabled]) {
-        _coreLocationManager.delegate = self;
-        _coreLocationManager.desiredAccuracy = kCLLocationAccuracyBest;
-        _coreLocationManager.distanceFilter = 50.0f;
-        
-        [_coreLocationManager startUpdatingLocation];
-    }
 }
 - (IBAction)registerResturant:(id)sender {    [_coreLocationManager stopUpdatingLocation];
     NSString *name = self.resturantNameTextfield.text;
@@ -120,15 +103,44 @@
     [self.resturantTable reloadData];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 - (IBAction)recordResturant:(id)sender {
     [self changeRecordViewLocationWithY:MARGIN_Y];
     [_coreLocationManager startUpdatingLocation];
     //[self.resturantTable reloadData];
 }
+
+//view 나타날 때 불리는 함수들
+- (void)viewWillAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:YES];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:NO];
+}
+
+- (void)viewDidLoad{
+    [super viewDidLoad];
+	// Do any additional setup after loading the view, typically from a nib.
+    _resturantManager = [ResturantManager sharedResturantManager];
+    [_resturantManager requestRestrant];
+    
+    [self changeRecordViewLocationWithY:HIDDEN_Y];
+    
+    
+    _coreLocationManager = [[CLLocationManager alloc] init];
+    if([CLLocationManager locationServicesEnabled]) {
+        _coreLocationManager.delegate = self;
+        _coreLocationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        _coreLocationManager.distanceFilter = 50.0f;
+        
+        [_coreLocationManager startUpdatingLocation];
+    }
+}
+//메모리 부족시 불림
+- (void)didReceiveMemoryWarning{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 @end

@@ -7,20 +7,30 @@
 //
 
 #import "DetailViewController.h"
+#import "TMapViewController.h"
 
 @interface DetailViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *locationNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *resturantNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *tagLabel;
+@property (weak, nonatomic) IBOutlet UITextView *detailView;
 
 @end
 
 @implementation DetailViewController
-
-
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    TMapViewController *mapVC = segue.destinationViewController;
+    
+    mapVC.lon = self.resturant.lon;
+    mapVC.lat = self.resturant.lat;
+}
 - (void)viewWillAppear:(BOOL)animated {
     [self.navigationController setNavigationBarHidden:NO];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [self.navigationController setNavigationBarHidden:YES];
+    
+    self.locationNameLabel.text = self.resturant.locationName;
+    self.resturantNameLabel.text = self.resturant.name;
+    self.tagLabel.text = self.resturant.tag;
+    self.detailView.text = self.resturant.detail;
 }
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
