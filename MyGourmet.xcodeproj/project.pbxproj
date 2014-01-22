@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00664FF4188F51CC00F97DE5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00664FF3188F51CC00F97DE5 /* Foundation.framework */; };
+		00664FF6188F51CC00F97DE5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00664FF5188F51CC00F97DE5 /* CoreGraphics.framework */; };
+		00664FF8188F51CC00F97DE5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00664FF7188F51CC00F97DE5 /* UIKit.framework */; };
+		00664FFE188F51CC00F97DE5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 00664FFC188F51CC00F97DE5 /* InfoPlist.strings */; };
+		00665000188F51CC00F97DE5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00664FFF188F51CC00F97DE5 /* main.m */; };
+		00665004188F51CC00F97DE5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00665003188F51CC00F97DE5 /* AppDelegate.m */; };
+		00665007188F51CC00F97DE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00665005188F51CC00F97DE5 /* Main.storyboard */; };
+		0066500A188F51CC00F97DE5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00665009188F51CC00F97DE5 /* ViewController.m */; };
+		0066500C188F51CC00F97DE5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0066500B188F51CC00F97DE5 /* Images.xcassets */; };
+		00665013188F51CC00F97DE5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00665012188F51CC00F97DE5 /* XCTest.framework */; };
+		00665014188F51CC00F97DE5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00664FF3188F51CC00F97DE5 /* Foundation.framework */; };
+		00665015188F51CC00F97DE5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00664FF7188F51CC00F97DE5 /* UIKit.framework */; };
+		0066501D188F51CC00F97DE5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0066501B188F51CC00F97DE5 /* InfoPlist.strings */; };
+		0066501F188F51CC00F97DE5 /* MyGourmetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0066501E188F51CC00F97DE5 /* MyGourmetTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00665016188F51CC00F97DE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00664FE8188F51CC00F97DE5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00664FEF188F51CC00F97DE5;
+			remoteInfo = MyGourmet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00664FF0188F51CC00F97DE5 /* MyGourmet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyGourmet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		00664FF3188F51CC00F97DE5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		00664FF5188F51CC00F97DE5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		00664FF7188F51CC00F97DE5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		00664FFB188F51CC00F97DE5 /* MyGourmet-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyGourmet-Info.plist"; sourceTree = "<group>"; };
+		00664FFD188F51CC00F97DE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		00664FFF188F51CC00F97DE5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		00665001188F51CC00F97DE5 /* MyGourmet-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyGourmet-Prefix.pch"; sourceTree = "<group>"; };
+		00665002188F51CC00F97DE5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		00665003188F51CC00F97DE5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		00665006188F51CC00F97DE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		00665008188F51CC00F97DE5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		00665009188F51CC00F97DE5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0066500B188F51CC00F97DE5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		00665011188F51CC00F97DE5 /* MyGourmetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyGourmetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00665012188F51CC00F97DE5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		0066501A188F51CC00F97DE5 /* MyGourmetTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyGourmetTests-Info.plist"; sourceTree = "<group>"; };
+		0066501C188F51CC00F97DE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0066501E188F51CC00F97DE5 /* MyGourmetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyGourmetTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00664FED188F51CC00F97DE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00664FF6188F51CC00F97DE5 /* CoreGraphics.framework in Frameworks */,
+				00664FF8188F51CC00F97DE5 /* UIKit.framework in Frameworks */,
+				00664FF4188F51CC00F97DE5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0066500E188F51CC00F97DE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00665013188F51CC00F97DE5 /* XCTest.framework in Frameworks */,
+				00665015188F51CC00F97DE5 /* UIKit.framework in Frameworks */,
+				00665014188F51CC00F97DE5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00664FE7188F51CC00F97DE5 = {
+			isa = PBXGroup;
+			children = (
+				00664FF9188F51CC00F97DE5 /* MyGourmet */,
+				00665018188F51CC00F97DE5 /* MyGourmetTests */,
+				00664FF2188F51CC00F97DE5 /* Frameworks */,
+				00664FF1188F51CC00F97DE5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		00664FF1188F51CC00F97DE5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00664FF0188F51CC00F97DE5 /* MyGourmet.app */,
+				00665011188F51CC00F97DE5 /* MyGourmetTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00664FF2188F51CC00F97DE5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00664FF3188F51CC00F97DE5 /* Foundation.framework */,
+				00664FF5188F51CC00F97DE5 /* CoreGraphics.framework */,
+				00664FF7188F51CC00F97DE5 /* UIKit.framework */,
+				00665012188F51CC00F97DE5 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		00664FF9188F51CC00F97DE5 /* MyGourmet */ = {
+			isa = PBXGroup;
+			children = (
+				00665002188F51CC00F97DE5 /* AppDelegate.h */,
+				00665003188F51CC00F97DE5 /* AppDelegate.m */,
+				00665005188F51CC00F97DE5 /* Main.storyboard */,
+				00665008188F51CC00F97DE5 /* ViewController.h */,
+				00665009188F51CC00F97DE5 /* ViewController.m */,
+				0066500B188F51CC00F97DE5 /* Images.xcassets */,
+				00664FFA188F51CC00F97DE5 /* Supporting Files */,
+			);
+			path = MyGourmet;
+			sourceTree = "<group>";
+		};
+		00664FFA188F51CC00F97DE5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				00664FFB188F51CC00F97DE5 /* MyGourmet-Info.plist */,
+				00664FFC188F51CC00F97DE5 /* InfoPlist.strings */,
+				00664FFF188F51CC00F97DE5 /* main.m */,
+				00665001188F51CC00F97DE5 /* MyGourmet-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		00665018188F51CC00F97DE5 /* MyGourmetTests */ = {
+			isa = PBXGroup;
+			children = (
+				0066501E188F51CC00F97DE5 /* MyGourmetTests.m */,
+				00665019188F51CC00F97DE5 /* Supporting Files */,
+			);
+			path = MyGourmetTests;
+			sourceTree = "<group>";
+		};
+		00665019188F51CC00F97DE5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0066501A188F51CC00F97DE5 /* MyGourmetTests-Info.plist */,
+				0066501B188F51CC00F97DE5 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00664FEF188F51CC00F97DE5 /* MyGourmet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00665022188F51CC00F97DE5 /* Build configuration list for PBXNativeTarget "MyGourmet" */;
+			buildPhases = (
+				00664FEC188F51CC00F97DE5 /* Sources */,
+				00664FED188F51CC00F97DE5 /* Frameworks */,
+				00664FEE188F51CC00F97DE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyGourmet;
+			productName = MyGourmet;
+			productReference = 00664FF0188F51CC00F97DE5 /* MyGourmet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		00665010188F51CC00F97DE5 /* MyGourmetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00665025188F51CC00F97DE5 /* Build configuration list for PBXNativeTarget "MyGourmetTests" */;
+			buildPhases = (
+				0066500D188F51CC00F97DE5 /* Sources */,
+				0066500E188F51CC00F97DE5 /* Frameworks */,
+				0066500F188F51CC00F97DE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00665017188F51CC00F97DE5 /* PBXTargetDependency */,
+			);
+			name = MyGourmetTests;
+			productName = MyGourmetTests;
+			productReference = 00665011188F51CC00F97DE5 /* MyGourmetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		00664FE8188F51CC00F97DE5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = T;
+				TargetAttributes = {
+					00665010188F51CC00F97DE5 = {
+						TestTargetID = 00664FEF188F51CC00F97DE5;
+					};
+				};
+			};
+			buildConfigurationList = 00664FEB188F51CC00F97DE5 /* Build configuration list for PBXProject "MyGourmet" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 00664FE7188F51CC00F97DE5;
+			productRefGroup = 00664FF1188F51CC00F97DE5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				00664FEF188F51CC00F97DE5 /* MyGourmet */,
+				00665010188F51CC00F97DE5 /* MyGourmetTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00664FEE188F51CC00F97DE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0066500C188F51CC00F97DE5 /* Images.xcassets in Resources */,
+				00664FFE188F51CC00F97DE5 /* InfoPlist.strings in Resources */,
+				00665007188F51CC00F97DE5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0066500F188F51CC00F97DE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0066501D188F51CC00F97DE5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00664FEC188F51CC00F97DE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0066500A188F51CC00F97DE5 /* ViewController.m in Sources */,
+				00665004188F51CC00F97DE5 /* AppDelegate.m in Sources */,
+				00665000188F51CC00F97DE5 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0066500D188F51CC00F97DE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0066501F188F51CC00F97DE5 /* MyGourmetTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00665017188F51CC00F97DE5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00664FEF188F51CC00F97DE5 /* MyGourmet */;
+			targetProxy = 00665016188F51CC00F97DE5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		00664FFC188F51CC00F97DE5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				00664FFD188F51CC00F97DE5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		00665005188F51CC00F97DE5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				00665006188F51CC00F97DE5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0066501B188F51CC00F97DE5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0066501C188F51CC00F97DE5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		00665020188F51CC00F97DE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		00665021188F51CC00F97DE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		00665023188F51CC00F97DE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyGourmet/MyGourmet-Prefix.pch";
+				INFOPLIST_FILE = "MyGourmet/MyGourmet-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		00665024188F51CC00F97DE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyGourmet/MyGourmet-Prefix.pch";
+				INFOPLIST_FILE = "MyGourmet/MyGourmet-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		00665026188F51CC00F97DE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MyGourmet.app/MyGourmet";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyGourmet/MyGourmet-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MyGourmetTests/MyGourmetTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		00665027188F51CC00F97DE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MyGourmet.app/MyGourmet";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyGourmet/MyGourmet-Prefix.pch";
+				INFOPLIST_FILE = "MyGourmetTests/MyGourmetTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00664FEB188F51CC00F97DE5 /* Build configuration list for PBXProject "MyGourmet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00665020188F51CC00F97DE5 /* Debug */,
+				00665021188F51CC00F97DE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00665022188F51CC00F97DE5 /* Build configuration list for PBXNativeTarget "MyGourmet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00665023188F51CC00F97DE5 /* Debug */,
+				00665024188F51CC00F97DE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		00665025188F51CC00F97DE5 /* Build configuration list for PBXNativeTarget "MyGourmetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00665026188F51CC00F97DE5 /* Debug */,
+				00665027188F51CC00F97DE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00664FE8188F51CC00F97DE5 /* Project object */;
+}
