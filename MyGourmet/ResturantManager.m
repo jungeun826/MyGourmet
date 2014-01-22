@@ -90,22 +90,22 @@ static ResturantManager *_instance = nil;
     NSString *locationNameString;
     
     while (SQLITE_ROW == sqlite3_step(stmt)) {
-        char *name = (char *)sqlite3_column_text(stmt, 1);
+        char *name = (char *)sqlite3_column_text(stmt, 0);
         nameString = [NSString stringWithCString:name encoding:NSUTF8StringEncoding];
         
-        char *tag = (char *)sqlite3_column_text(stmt, 2);
+        char *tag = (char *)sqlite3_column_text(stmt, 1);
         tagString = [NSString stringWithCString:tag encoding:NSUTF8StringEncoding];
         
-        char *detail = (char *)sqlite3_column_text(stmt, 3);
+        char *detail = (char *)sqlite3_column_text(stmt, 2);
         detailString = [NSString stringWithCString:detail encoding:NSUTF8StringEncoding];
         
-        char *locationName = (char *)sqlite3_column_text(stmt, 4);
+        char *locationName = (char *)sqlite3_column_text(stmt, 3);
         locationNameString = [NSString stringWithCString:locationName encoding:NSUTF8StringEncoding];
         
-        float lon = (float)sqlite3_column_double(stmt, 5);
+        float lon = (float)sqlite3_column_double(stmt, 4);
         
-        float lat = (float)sqlite3_column_double(stmt, 6);
-        
+        float lat = (float)sqlite3_column_double(stmt, 5);
+        NSLog(@"name:%@,tag:%@,detail:%@,locationName:%@,lon:%f,lat:%f",nameString,tagString,detailString,locationNameString,lon,lat);
         Resturant *resturant= [[Resturant alloc] initWithName:nameString locationName:locationNameString tag:tagString detail:detailString lon:lon lat:lat];
         
         [_ResturantList addObject:resturant];

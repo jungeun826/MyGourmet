@@ -13,11 +13,11 @@
     self = [super init];
     if (self) {
         self.name = name;
+        self.locationName = locationName;
         self.tag = tag;
         self.detail = detail;
         self.lon = lon;
         self.lat = lat;
-        self.locationName = locationName;
     }
     return self;
 }

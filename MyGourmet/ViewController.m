@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "ResturantManager.h"
 #import <CoreLocation/CoreLocation.h>
-
+#import "ResturantCell.h"
 #define MARGIN_Y 30
 #define HIDDEN_Y 600
 @interface ViewController () <CLLocationManagerDelegate, UIAlertViewDelegate, UITextFieldDelegate>
@@ -28,7 +28,14 @@
     float _lon;
     float _lat;
 }
+- (void)viewWillAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:YES];
+}
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:NO];
+    
+}
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];
     return YES;
@@ -39,9 +46,10 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RESTURANT_CELL" forIndexPath:indexPath];
+    ResturantCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RESTURANT_CELL" forIndexPath:indexPath];
     Resturant *resturant = [_resturantManager getResturantAtIndex:indexPath.row];
-    cell.textLabel.text = resturant.name;
+    [cell setResturantInfo:resturant];
+    
     return cell;
 }
 -(void) locationManager: (CLLocationManager *) manager
@@ -52,7 +60,6 @@
     
     NSLog(@"update location %f, %f", _lon, _lat);
 }
-
 -(void) locationManager: (CLLocationManager *) manager didFailWithError: (NSError *) error {
     NSString *msg = @"Error obtaining location";
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"GPS 수신 설정해주세요" message:msg delegate:self cancelButtonTitle:nil otherButtonTitles: nil];
@@ -61,8 +68,7 @@
 - (void)changeRecordViewLocationWithY:(NSInteger)Y{
     self.recordView.frame = CGRectMake(self.recordView.frame.origin.x, Y, self.recordView.frame.size.width, self.recordView.frame.size.height);
 }
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     _resturantManager = [ResturantManager sharedResturantManager];
@@ -80,9 +86,7 @@
         [_coreLocationManager startUpdatingLocation];
     }
 }
-- (IBAction)registerResturant:(id)sender {
-    
-    [_coreLocationManager stopUpdatingLocation];
+- (IBAction)registerResturant:(id)sender {    [_coreLocationManager stopUpdatingLocation];
     NSString *name = self.resturantNameTextfield.text;
     NSString *locationName = self.locationNameTextfield.text;
     NSString *tag = self.tagTextField.text;
