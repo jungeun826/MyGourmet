@@ -69,8 +69,6 @@ static ResturantManager *_instance = nil;
     if (SQLITE_OK != ret) {
         NSLog(@"Error on Insert New data : %s", errMsg);
     }
-
-    NSLog(@"rowID : %d", (int)sqlite3_last_insert_rowid(db));
 }
 
 //맛집을 디비에서 제거
